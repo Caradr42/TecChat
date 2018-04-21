@@ -1,13 +1,13 @@
 import { NgModule } from '@angular/core';
 import { IonicPageModule } from 'ionic-angular';
-import { FirstPage } from './first';
+import { RegisterPage } from './register';
 
 @NgModule({
   declarations: [
-    FirstPage,
+    RegisterPage,
   ],
   imports: [
-    IonicPageModule.forChild(FirstPage),
+    IonicPageModule.forChild(RegisterPage),
   ],
 })
-export class FirstPageModule {}
+export class RegisterPageModule {}
