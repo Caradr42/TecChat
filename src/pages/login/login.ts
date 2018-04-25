@@ -1,6 +1,8 @@
 import { Component, ViewChild } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { RegisterPage } from '../register/register';
+import { HomePage } from '../home/home';
+
 
 /**
  * Generated class for the LoginPage page.
@@ -28,9 +30,10 @@ export class LoginPage {
 
   signInUser(){
   	console.log('would you sign in with ', this.email.value, this.password.value);
+    this.navCtrl.push(HomePage);
   }
 
-   register(){
+  register(){
   	this.navCtrl.push(RegisterPage);
   }
 

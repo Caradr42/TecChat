@@ -6,4 +6,33 @@ page-home {
 	#topButtons button{
 		flex: 1;
 	}
+
+	$colors: (
+	  primary:    #336666,
+	  light:      #fffffc,
+	  lGray:      #bebebe,
+	  mGray:      #666666,
+	  dGray:      #333333,
+	  orange:     #a94d22,
+	  red:        #993333,
+	  darkBlue:   #000033,
+
+	  twitter: (
+	    base: #55acee,
+	    contrast: #ffffff
+	  )
+	);
+	my-component {
+ 		 background: color($colors, twitter, base);
+	}
+	.list-avatar-page {
+	  ion-note {
+	    font-size: 12px;
+	    align-self: flex-start;
+	    margin-top: 14px;
+	 	}
+	}
+	ion-scroll {
+		height: 200px;
+	}
 }
