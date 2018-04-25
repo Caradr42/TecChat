@@ -1,0 +1,109 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-grid>
+      <ion-row>
+        <ion-col col-1>
+          <img src="assets/imgs/PNGs/logo.png"> 
+        </ion-col>
+        <ion-col col-lg-7>
+            <!-- <ion-title>  -->
+           <ion-item color="primary">
+              <ion-avatar item-start>
+                <img src="assets/imgs/PNGS/alumna.png">
+              </ion-avatar>
+              Laura Gutiérrez Pérez
+            </ion-item>
+            <!-- </ion-title> -->
+        </ion-col>
+        <ion-col></ion-col>
+        <ion-col align-self-center col-md-3 col-12>
+          <ion-searchbar  (ionInput)="getItems($event)"></ion-searchbar>
+          <ion-list>
+            <ion-item *ngFor="let item of items">
+              {{ item }}
+            </ion-item>
+          </ion-list>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-grid>
+    <ion-row>
+      <ion-col col-lg-4 col-12>
+        <ion-scroll scrollY="true">
+        <div class="Favorites">
+          <ion-list>
+            <ion-list-header>Favoritos</ion-list-header>
+
+            <ion-item>
+              <ion-avatar item-start>
+                <img src="assets/imgs/PNGs/maestro.png">
+              </ion-avatar>
+              <h2>Dr. Luis Jóse Garza Robledo</h2>
+              <p>Active.</p>
+              <ion-note item-end>3:43 pm</ion-note>
+            </ion-item>
+
+            <ion-item>
+              <ion-avatar item-start>
+                <img src="assets/imgs/PNGs/pp.png">
+              </ion-avatar>
+              <h2>Roberto Gomez Garza</h2>
+              <p>Active.</p>
+              <ion-note item-end>2:00 pm</ion-note>
+            </ion-item>
+
+            <ion-item>
+              <ion-avatar item-start>
+                <img src="assets/imgs/PNGs/pp.png">
+              </ion-avatar>
+              <h2>María Gonzalez Gonzalez</h2>
+              <p>Busy.</p>
+              <ion-note item-end>5:30 pm</ion-note>
+            </ion-item>
+          </ion-list>
+        </div>
+      </ion-scroll>
+
+        <div class="Groups">
+          <ion-list>
+            <ion-list-header>Grupos</ion-list-header>
+            <ion-scroll scrollY="true">
+              <ion-item>
+                <ion-avatar item-start>
+                  <img src="assets/imgs/PNGs/pp.png">
+                </ion-avatar>
+                <h2>Administración</h2>
+                <p>Grupo 2.</p>
+                <!-- <ion-note item-end>3:43 pm</ion-note> -->
+              </ion-item>
+
+              <ion-item>
+                <ion-avatar item-start>
+                  <img src="assets/imgs/PNGs/pp.png">
+                </ion-avatar>
+                <h2>EVAP</h2>
+                <p>Grupo 5.</p>
+                <!-- <ion-note item-end>2:00 pm</ion-note> -->
+              </ion-item>
+
+              <ion-item>
+                <ion-avatar item-start>
+                  <img src="assets/imgs/PNGs/pp.png">
+                </ion-avatar>
+                <h2>Ética</h2>
+                <p>Grupo 3.</p>
+                <!-- <ion-note item-end>5:30 pm</ion-note> -->
+              </ion-item>
+              </ion-scroll>
+          </ion-list>
+        </div>
+
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+</ion-content>
