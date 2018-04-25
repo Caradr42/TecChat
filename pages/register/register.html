@@ -5,33 +5,43 @@
   Ionic pages and navigation.
 -->
 <ion-header>
-
-  <ion-navbar>
-    <ion-title>Create Account</ion-title>
+  <ion-navbar color="darkG">
+    <ion-title>Crear Cuenta</ion-title>
   </ion-navbar>
-
 </ion-header>
 
 
 <ion-content padding>
-	<ion-list>
-        <ion-item>
-          <ion-label floating>Username</ion-label>
-          <ion-input type="text" #username></ion-input>
-        </ion-item>
+  <ion-grid>
+    <ion-row>
+      <ion-col></ion-col>
+      <ion-col align-self-center col-lg-5 col-12>
+        <div class="center">
+          <h1>TecChat</h1>
+        	<ion-list>
+                <ion-item>
+                  <ion-label floating>Nombre</ion-label>
+                  <ion-input type="text" #username></ion-input>
+                </ion-item>
 
-        <ion-item>
-          <ion-label floating>Email</ion-label>
-          <ion-input type="text" #email></ion-input>
-        </ion-item>
+                <ion-item>
+                  <ion-label floating>Correo Institucional</ion-label>
+                  <ion-input type="text" #email></ion-input>
+                </ion-item>
 
-        <ion-item>
-          <ion-label floating>Password</ion-label>
-          <ion-input type="password" #password></ion-input>
-        </ion-item>
-     	<div padding>
-     		<button ion-button round (click)="registerUser()">Register</button>
-        	<button ion-button round (click)="signIn()">Login</button>
-		</div>
-	</ion-list>
+                <ion-item>
+                  <ion-label floating>Contraseña</ion-label>
+                  <ion-input type="password" #password></ion-input>
+                </ion-item>
+
+             	<div padding>
+             		<button ion-button round (click)="registerUser()">Registrar</button>
+                <button ion-button round (click)="signIn()">Login</button>
+        		  </div>
+          	</ion-list>
+          </div>
+      </ion-col>
+      <ion-col></ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>
