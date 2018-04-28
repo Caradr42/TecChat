@@ -1,0 +1,40 @@
+<!-- splitplane
+  events or toggle menu
+ -->
+
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-grid>
+      <ion-row>
+        <!-- <ion-col>
+          <img src="assets/imgs/PNGs/logo.png"> 
+        </ion-col> -->
+        <ion-col> 
+          <ion-searchbar  (ionInput)="getItems($event)"></ion-searchbar>
+            <ion-list>
+              <ion-item *ngFor="let item of items">
+                {{ item }}
+              </ion-item>
+            </ion-list>
+        </ion-col>
+        <ion-col col-3> 
+          <ion-item color="primary">
+            <ion-avatar item-start>
+               <img src="assets/imgs/PNGS/alumna.png">
+            </ion-avatar> 
+          </ion-item>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+   <ion-tabs>
+     <ion-tab [root]="RecentsRoot" tabTitle="Recientes">Recientes</ion-tab>
+    <ion-tab [root]="FavoritesRoot" tabTitle="Favoritos">akldsf</ion-tab>
+    <ion-tab [root]="ClassesRoot" tabTitle="Clases">kasdj;f</ion-tab>
+    <ion-tab [root]="GroupsRoot" tabTitle="Grupos"></ion-tab>
+  </ion-tabs>
+
+</ion-content>
