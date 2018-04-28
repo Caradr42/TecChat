@@ -1,5 +1,9 @@
+<!-- splitplane
+  events or toggle menu
+ -->
+
 <ion-header>
-  <ion-navbar color="darkBlue">
+  <ion-navbar color="primary">
     <ion-grid>
       <ion-row>
         <ion-col>
@@ -7,7 +11,7 @@
         </ion-col>
         <ion-col col-lg-7>
             <!-- <ion-title>  -->
-           <ion-item>
+           <ion-item color="primary">
               <ion-avatar item-start>
                 <img src="assets/imgs/PNGS/alumna.png">
               </ion-avatar>
@@ -15,8 +19,9 @@
             </ion-item>
             <!-- </ion-title> -->
         </ion-col>
-        <ion-col align-self-center col-md-4 col-12>
-          <ion-searchbar (ionInput)="getItems($event)"></ion-searchbar>
+        <ion-col></ion-col>
+        <ion-col align-self-center col-md-3 col-12>
+          <ion-searchbar  (ionInput)="getItems($event)"></ion-searchbar>
           <ion-list>
             <ion-item *ngFor="let item of items">
               {{ item }}
@@ -101,6 +106,26 @@
           </ion-list>
         </div>
 
+      </ion-col>
+      <ion-col>
+        <ion-navbar color="light">
+          <ion-col>
+            <ion-img style="width: 60px; height: 60px;" src="assets/imgs/PNGs/VideoLlamada.png"></ion-img>
+            <ion-img style="width: 60px; height: 60px;" src="assets/imgs/PNGs/Llamada.png"></ion-img>
+          </ion-col>
+          <ion-col>
+            <ion-item color="light">
+                <ion-avatar item-start>
+                  <img src="assets/imgs/PNGs/maestro.png">
+                </ion-avatar>
+                <h4>Dr. Luis Jóse Garza Robledo</h4>
+            </ion-item>
+          </ion-col>
+          <ion-col>
+            <ion-img style="width: 60px; height: 60px;" src="assets/imgs/PNGs/PuntosSuspensivos.png"></ion-img>
+            <ion-img style="width: 60px; height: 60px;" src="assets/imgs/PNGs/Ajustes.png"></ion-img>
+         </ion-col>
+        </ion-navbar>
       </ion-col>
     </ion-row>
   </ion-grid>
