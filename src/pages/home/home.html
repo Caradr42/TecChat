@@ -5,42 +5,92 @@
 <ion-header>
   <ion-navbar color="primary">
     <ion-grid>
-      <ion-row>
-        <ion-col>
+      <ion-row align-items-center>
+        <!-- <ion-col>
           <img src="assets/imgs/PNGs/logo.png"> 
-        </ion-col>
-        <ion-col col-lg-7>
-            <!-- <ion-title>  -->
-           <ion-item color="primary">
-              <ion-avatar item-start>
-                <img src="assets/imgs/PNGS/alumna.png">
-              </ion-avatar>
-              Laura Gutiérrez Pérez
-            </ion-item>
-            <!-- </ion-title> -->
-        </ion-col>
-        <ion-col></ion-col>
-        <ion-col align-self-center col-md-3 col-12>
+        </ion-col> -->
+        <!-- search -->
+        <ion-col >
           <ion-searchbar  (ionInput)="getItems($event)"></ion-searchbar>
-          <ion-list>
-            <ion-item *ngFor="let item of items">
-              {{ item }}
-            </ion-item>
-          </ion-list>
+            <ion-list hidden>
+              <ion-item *ngFor="let item of items" >
+                {{ item }}
+              </ion-item>
+            </ion-list>
+        </ion-col>
+        <!-- photo -->
+        <ion-col col-3> 
+               <img class="avatar" (click)="profile()" src="assets/imgs/PNGS/alumna.png">
         </ion-col>
       </ion-row>
     </ion-grid>
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-  <ion-grid>
-    <ion-row>
-      <ion-col col-lg-4 col-12>
-        <ion-scroll scrollY="true">
-        <div class="Favorites">
+<ion-content>
+  <!-- Primer sistema de ventanas -->
+  <!-- Segmento del primer sistema de ventanas -->
+  <div>
+    <ion-segment class="space" [(ngModel)]="FavRes">
+      <ion-segment-button value="Recientes">
+        Recientes
+      </ion-segment-button>
+      <ion-segment-button value="Favoritos">
+        Favoritos
+      </ion-segment-button>
+      <ion-segment-button value="Clases">
+        Clases
+      </ion-segment-button>
+      <ion-segment-button value="Grupos">
+        Grupos
+      </ion-segment-button>
+    </ion-segment>
+    <ion-input [(ngModel)]="FavRes" type="hidden" value="Recientes" width="0" size="0" height="0"></ion-input>
+  </div>
+
+  <!-- Las opciones de los segmentos -->
+  <div [ngSwitch]="FavRes"> 
+
+    <ion-list *ngSwitchCase="'Recientes'">
+      <ion-scroll scrollY="true">
+        <div class="Recientes">
           <ion-list>
-            <ion-list-header>Favoritos</ion-list-header>
+            <ion-item>
+              <ion-avatar item-start (click)="teacherProfile()">
+                <img src="assets/imgs/PNGs/maestro.png">
+              </ion-avatar>
+              <h2>NOT Dr. Luis Jóse Garza Robledo</h2>
+              <p>Active.</p>
+              <ion-note item-end>3:43 pm</ion-note>
+            </ion-item>
+
+            <ion-item>
+              <ion-avatar item-start>
+                <img src="assets/imgs/PNGs/pp.png">
+              </ion-avatar>
+              <h2>NOT Roberto Gomez Garza</h2>
+              <p>Active.</p>
+              <ion-note item-end>2:00 pm</ion-note>
+            </ion-item>
+
+            <ion-item>
+              <ion-avatar item-start>
+                <img src="assets/imgs/PNGs/pp.png">
+              </ion-avatar>
+              <h2>NOT María Gonzalez Gonzalez</h2>
+              <p>Busy.</p>
+              <ion-note item-end>5:30 pm</ion-note>
+            </ion-item>
+          </ion-list>
+        </div>
+      </ion-scroll>
+    </ion-list>     
+
+
+    <ion-list *ngSwitchCase="'Favoritos'">
+      <ion-scroll scrollY="true">
+        <div class="Favoritos">
+          <ion-list>
 
             <ion-item>
               <ion-avatar item-start>
@@ -71,18 +121,19 @@
           </ion-list>
         </div>
       </ion-scroll>
+    </ion-list>   
 
-        <div class="Groups">
+    <ion-list *ngSwitchCase="'Clases'">
+      <ion-scroll scrollY="true">
+        <div class="Clases">
           <ion-list>
-            <ion-list-header>Grupos</ion-list-header>
-            <ion-scroll scrollY="true">
+            
               <ion-item>
                 <ion-avatar item-start>
                   <img src="assets/imgs/PNGs/pp.png">
                 </ion-avatar>
                 <h2>Administración</h2>
-                <p>Grupo 2.</p>
-                <!-- <ion-note item-end>3:43 pm</ion-note> -->
+                <p>Grupo 2.</p>                       
               </ion-item>
 
               <ion-item>
@@ -90,8 +141,7 @@
                   <img src="assets/imgs/PNGs/pp.png">
                 </ion-avatar>
                 <h2>EVAP</h2>
-                <p>Grupo 5.</p>
-                <!-- <ion-note item-end>2:00 pm</ion-note> -->
+                <p>Grupo 5.</p>         
               </ion-item>
 
               <ion-item>
@@ -99,35 +149,53 @@
                   <img src="assets/imgs/PNGs/pp.png">
                 </ion-avatar>
                 <h2>Ética</h2>
-                <p>Grupo 3.</p>
-                <!-- <ion-note item-end>5:30 pm</ion-note> -->
-              </ion-item>
-              </ion-scroll>
+                <p>Grupo 3.</p>          
+              </ion-item>                   
+
           </ion-list>
         </div>
+      </ion-scroll>
+    </ion-list>   
 
-      </ion-col>
-      <ion-col>
-        <ion-navbar color="light">
-          <ion-col>
-            <ion-img style="width: 60px; height: 60px;" src="assets/imgs/PNGs/VideoLlamada.png"></ion-img>
-            <ion-img style="width: 60px; height: 60px;" src="assets/imgs/PNGs/Llamada.png"></ion-img>
-          </ion-col>
-          <ion-col>
-            <ion-item color="light">
+    <ion-list *ngSwitchCase="'Grupos'">
+      <ion-scroll scrollY="true">
+        <div class="Grupos">
+          <ion-list>
+
+              <ion-item>
                 <ion-avatar item-start>
-                  <img src="assets/imgs/PNGs/maestro.png">
+                  <img src="assets/imgs/PNGs/pp.png">
                 </ion-avatar>
-                <h4>Dr. Luis Jóse Garza Robledo</h4>
-            </ion-item>
-          </ion-col>
-          <ion-col>
-            <ion-img style="width: 60px; height: 60px;" src="assets/imgs/PNGs/PuntosSuspensivos.png"></ion-img>
-            <ion-img style="width: 60px; height: 60px;" src="assets/imgs/PNGs/Ajustes.png"></ion-img>
-         </ion-col>
-        </ion-navbar>
-      </ion-col>
-    </ion-row>
-  </ion-grid>
+                <h2>NOT Administración</h2>
+                <p>Grupo 2.</p>                       
+              </ion-item>
 
+              <ion-item>
+                <ion-avatar item-start>
+                  <img src="assets/imgs/PNGs/pp.png">
+                </ion-avatar>
+                <h2>NOT EVAP</h2>
+                <p>Grupo 5.</p>         
+              </ion-item>
+
+              <ion-item>
+                <ion-avatar item-start>
+                  <img src="assets/imgs/PNGs/pp.png">
+                </ion-avatar>
+                <h2>NOT Ética</h2>
+                <p>Grupo 3.</p>          
+              </ion-item>
+
+          </ion-list>
+        </div>
+      </ion-scroll>
+    </ion-list>     
+  </div>
+   <!--   <ion-tabs>
+     <ion-tab [root]="RecentsRoot" tabTitle="Recientes">Recientes</ion-tab>
+    <ion-tab [root]="FavoritesRoot" tabTitle="Favoritos">akldsf</ion-tab>
+    <ion-tab [root]="ClassesRoot" tabTitle="Clases">kasdj;f</ion-tab>
+    <ion-tab [root]="GroupsRoot" tabTitle="Grupos"></ion-tab>
+  </ion-tabs> -->
+  
 </ion-content>

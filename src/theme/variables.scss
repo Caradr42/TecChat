@@ -43,15 +43,21 @@ $colors: (
   lightG:     #bebebe,
   mediumG:    #666666,
   darkG:      #333333,
-  aqua:       #000033
+  darkB:      #000033,
+  blueG:      #2cbf69
 );
+
+.avatar {
+  border-radius: 100%;
+  cursor: pointer;
+}
 
 
 // App iOS Variables
 // --------------------------------------------------
 // iOS only Sass variables can go here
 
-
+$segment-button-ios-border-style: none;
 
 
 // App Material Design Variables

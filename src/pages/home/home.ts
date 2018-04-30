@@ -1,19 +1,24 @@
 import { Component, ViewChild } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { LoginPage } from '../login/login';
-import { RegisterPage } from '../register/register';
 import { Http } from '@angular/http';
 import 'rxjs/add/operator/map';
+
+import { ProfilePage } from '../profile/profile';
+import { TeacherProfilePage } from '../teacher-profile/teacher-profile';
+import { ChatPage } from '../chat/chat';
 
 @Component({
   selector: 'page-home',
   templateUrl: 'home.html'
 })
+
 export class HomePage {
   posts: any;
 
   @ViewChild('email') email;
   @ViewChild('password') password;
+
    constructor(public navCtrl: NavController, public http: Http) {
  
     this.http.get('http://localhost:8080/posts/').map(res => res.json()).subscribe(data => {
@@ -21,13 +26,53 @@ export class HomePage {
         // console.log(posts);
     });
   }
+  
+  items;
 
-  signIn(){
-  	this.navCtrl.push(LoginPage);
+  // constructor() {
+  //   this.initializeItems();
+  // }
+
+  initializeItems() {
+    this.items = [
+      'Amsterdam',
+      'Bogota',
+      'Buenos Aires',
+      'Cairo',
+      'Dhaka'
+       ];
   }
 
-  register(){
-  	this.navCtrl.push(RegisterPage);
+  getItems(ev) {
+    // Reset items back to all of the items
+    this.initializeItems();
+
+    // set val to the value of the ev target
+    var val = ev.target.value;
+
+    // if the value is an empty string don't filter the items
+    if (val && val.trim() != '') {
+      this.items = this.items.filter((item) => {
+        return (item.toLowerCase().indexOf(val.toLowerCase()) > -1);
+      })
+    }
   }
+
+  profile(){
+     this.navCtrl.push(ProfilePage);
+  }
+
+  teacherProfile(){
+     this.navCtrl.push(TeacherProfilePage);
+  }
+
+  chat(){
+    this.navCtrl.push(ChatPage);
+  }
+
+  // RecentsRoot = RecentsPage;
+  // FavoritesRoot = FavoritesPage;
+  // ClassesRoot = ClassesPage;
+  // GroupsRoot = GroupsPage;
 
 }
