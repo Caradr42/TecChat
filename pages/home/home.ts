@@ -4,10 +4,9 @@ import { LoginPage } from '../login/login';
 import { Http } from '@angular/http';
 import 'rxjs/add/operator/map';
 
-import { FavoritesPage } from '../favorites/favorites';
-import { GroupsPage } from '../groups/groups';
-import { RecentsPage } from '../recents/recents';
-import { ClassesPage } from '../classes/classes';
+import { ProfilePage } from '../profile/profile';
+import { TeacherProfilePage } from '../teacher-profile/teacher-profile';
+import { ChatPage } from '../chat/chat';
 
 @Component({
   selector: 'page-home',
@@ -19,6 +18,7 @@ export class HomePage {
 
   @ViewChild('email') email;
   @ViewChild('password') password;
+
    constructor(public navCtrl: NavController, public http: Http) {
  
     this.http.get('http://localhost:8080/posts/').map(res => res.json()).subscribe(data => {
@@ -26,15 +26,53 @@ export class HomePage {
         // console.log(posts);
     });
   }
+  
+  items;
 
-  signIn(){
-  	this.navCtrl.push(LoginPage);
+  // constructor() {
+  //   this.initializeItems();
+  // }
+
+  initializeItems() {
+    this.items = [
+      'Amsterdam',
+      'Bogota',
+      'Buenos Aires',
+      'Cairo',
+      'Dhaka'
+       ];
   }
 
-  RecentsRoot = RecentsPage;
-  FavoritesRoot = FavoritesPage;
-  ClassesRoot = ClassesPage;
-  GroupsRoot = GroupsPage;
+  getItems(ev) {
+    // Reset items back to all of the items
+    this.initializeItems();
 
+    // set val to the value of the ev target
+    var val = ev.target.value;
+
+    // if the value is an empty string don't filter the items
+    if (val && val.trim() != '') {
+      this.items = this.items.filter((item) => {
+        return (item.toLowerCase().indexOf(val.toLowerCase()) > -1);
+      })
+    }
+  }
+
+  profile(){
+     this.navCtrl.push(ProfilePage);
+  }
+
+  teacherProfile(){
+     this.navCtrl.push(TeacherProfilePage);
+  }
+
+  chat(){
+    this.navCtrl.push(ChatPage);
+  }
+
+  // RecentsRoot = RecentsPage;
+  // FavoritesRoot = FavoritesPage;
+  // ClassesRoot = ClassesPage;
+  // GroupsRoot = GroupsPage;
 
 }

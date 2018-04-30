@@ -1,20 +1,20 @@
 page-home {
-	#topButtons {
-		display: flex;
-		flex-direction: row;
+	ion-item h2 {
+		width: auto;
 	}
-	#topButtons button{
-		flex: 1;
-	}
-	.list-avatar-page {
-	  ion-note {
-	    font-size: 12px;
+
+	ion-note {
+	    font-size: 80%;
 	    align-self: flex-start;
 	    margin-top: 14px;
 	 	}
-	}
+
 	ion-scroll {
 		height: 200px;
+	}
+
+	.space {
+		border-style: none;
 	}
 
 }

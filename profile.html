@@ -1,0 +1,126 @@
+<!--
+  Generated template for the ProfilePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>Editar Perfil</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="cards-bg">
+    <ion-card>
+	<!-- foto de usuario para editar-->
+	<img class="avatar" src="assets/imgs/PNGS/alumna.png">
+	
+	<!-- Laura Gutiérrez Pérez -->
+
+	<!-- info personal -->
+    <ion-card-content>
+      <ion-card-title>
+        Datos del Usuario:
+      </ion-card-title>
+      <h6> </h6>
+		<ion-list>
+			<!-- CARRERA -->
+		    <ion-item>
+		      <ion-label>Carrera</ion-label>
+		      <ion-select [(ngModel)]="carreras" interface="popover">
+		      	<ion-searchbar (ionInput)="getItems($event)"></ion-searchbar>
+				<ion-list>
+				  <ion-item *ngFor="let item of items">
+				    {{ item }}
+				  </ion-item>
+				</ion-list>
+		        <ion-option value="nes">NES</ion-option>
+		        <ion-option value="n64">Nintendo64</ion-option>
+		        <ion-option value="ps">PlayStation</ion-option>
+		        <ion-option value="genesis">Sega Genesis</ion-option>
+		        <ion-option value="saturn">Sega Saturn</ion-option>
+		        <ion-option value="snes">SNES</ion-option>
+		      </ion-select>
+		    </ion-item>
+		    <!-- SEMESTRE -->
+		    <ion-item>
+		      <ion-label>Semestre</ion-label>
+		      <ion-select [(ngModel)]="semestre" interface="popover">
+		      	<ion-option value="0"> </ion-option>
+		        <ion-option value="1">1°</ion-option>
+		        <ion-option value="2">2°</ion-option>
+		        <ion-option value="3">3°</ion-option>
+		        <ion-option value="4">4°</ion-option>
+		        <ion-option value="5">5°</ion-option>
+		        <ion-option value="6">6°</ion-option>
+		        <ion-option value="7">7°</ion-option>
+		        <ion-option value="8">8°</ion-option>
+		        <ion-option value="9">9°</ion-option>
+		        <ion-option value="10">10°</ion-option>
+		        <ion-option value="11">11°</ion-option>
+		        <ion-option value="12">12°</ion-option>
+		      </ion-select>
+		    </ion-item>
+		</ion-list>
+
+    </ion-card-content>
+	    <!-- botones -->
+	    <ion-row no-padding>
+	      <ion-col>
+	        <button ion-button clear small color="primary" icon-start>
+	          <ion-icon name='chatbubbles'></ion-icon>
+	          Mandar mensaje
+	        </button>
+	      </ion-col>
+	      <ion-col text-center>
+	        <button ion-button clear small color="primary" icon-start>
+	          <ion-icon name='call'></ion-icon>
+	          Llamar
+	        </button>
+	      </ion-col>
+	    </ion-row>
+	    <!-- lista de materias que imparte -->
+	    <ion-row no-padding>
+	    	<ion-list>
+				<ion-list-header>
+					Materias impartidas
+				</ion-list-header>
+				<ion-item>
+					Finanzas Gpo 1
+				</ion-item>
+				<ion-item>
+					Finanzas Gpo 2
+				</ion-item>
+				<ion-item>
+					Administración de costos y precios Gpo 3
+				</ion-item>
+				<ion-item>
+					Analisis de informacion financiera Gpo 4
+				</ion-item>
+	  	 	</ion-list>
+		</ion-row>
+
+	<h1>Datos del Usuario: </h1>
+	<!-- dropdown -->
+	
+	
+	
+
+	<!-- inputs -->
+	<h2>Nombre</h2>
+	<h2>Contraseña</h2>
+	<h2>Confirmar contraseña</h2>
+
+	<!-- botton para agregar cv -->
+	<h1>Privacidad: </h1>
+	<!-- Switch -->
+	<h2>Mostrar cuando he visto un mensaje</h2>
+	<h2>Notificaciones</h2>
+	<h2>Sincronizar con Google</h2>
+
+	<h1>Horario disponible:</h1>
+	<!-- tabla -->
+
+	<!-- botton de guardar y cancelar -->
+	</ion-card>
+</ion-content>

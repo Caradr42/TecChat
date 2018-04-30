@@ -50,7 +50,7 @@ export class LoginPage {
   	this.navCtrl.push(RegisterPage);
   }
 
-//  tries
+// // tries
 //   chat(){
 //     this.navCtrl.push(ChatPage);
 //   }

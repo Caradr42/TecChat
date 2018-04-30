@@ -6,13 +6,161 @@
 -->
 <ion-header>
 
-  <ion-navbar>
-    <ion-title>teacherProfile</ion-title>
+  <ion-navbar  color="primary">
+    <ion-title>Información</ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
-<ion-content padding>
+<ion-content class="cards-bg">
+    <ion-card>
+
+	    <img class="avatar" src="assets/imgs/PNGS/maestro.png">
+
+		<!-- info personal -->
+	    <ion-card-content>
+	      <ion-card-title>
+	        Dr. Luis Jóse Garza Robledo
+	      </ion-card-title>
+	      <h6>L00917347</h6>
+	    </ion-card-content>
+	    <!-- botones -->
+	    <ion-row no-padding>
+	      <ion-col>
+	        <button ion-button clear small color="primary" icon-start>
+	          <ion-icon name='chatbubbles'></ion-icon>
+	          Mandar mensaje
+	        </button>
+	      </ion-col>
+	      <ion-col text-center>
+	        <button ion-button clear small color="primary" icon-start>
+	          <ion-icon name='call'></ion-icon>
+	          Llamar
+	        </button>
+	      </ion-col>
+	    </ion-row>
+	    <!-- lista de materias que imparte -->
+	    <ion-row no-padding>
+	    	<ion-list>
+				<ion-list-header>
+					Materias impartidas
+				</ion-list-header>
+				<ion-item>
+					Finanzas Gpo 1
+				</ion-item>
+				<ion-item>
+					Finanzas Gpo 2
+				</ion-item>
+				<ion-item>
+					Administración de costos y precios Gpo 3
+				</ion-item>
+				<ion-item>
+					Analisis de informacion financiera Gpo 4
+				</ion-item>
+	  	 	</ion-list>
+		</ion-row>
+
+		<!-- horario -->
+		<ion-row>
+			<ion-col></ion-col>
+			<ion-col>Lun</ion-col>
+			<ion-col>Mar</ion-col>
+			<ion-col>Mie</ion-col>
+			<ion-col>Jue</ion-col>
+			<ion-col>Vie</ion-col>
+			<ion-col>Sab</ion-col>
+			<ion-col>Dom</ion-col>
+		</ion-row>
+		<ion-row> <ion-col>05:00</ion-col> </ion-row>
+		<ion-row> <ion-col>06:00</ion-col> </ion-row>
+		<ion-row> <ion-col>07:00</ion-col> </ion-row>
+		<ion-row> <ion-col>08:00</ion-col> </ion-row>
+		<ion-row> <ion-col>09:00</ion-col> </ion-row>
+		<ion-row> <ion-col>10:00</ion-col> 
+			<ion-col class="available"></ion-col>
+			<ion-col></ion-col>
+			<ion-col></ion-col>
+			<ion-col class="available"></ion-col>
+			<ion-col></ion-col>
+			<ion-col></ion-col>
+			<ion-col></ion-col>
+		</ion-row>
+		<ion-row> <ion-col>11:00</ion-col> 
+			<ion-col class="available"></ion-col>
+			<ion-col class="available"></ion-col>
+			<ion-col></ion-col>
+			<ion-col class="available"></ion-col>
+			<ion-col class="available"></ion-col>
+			<ion-col></ion-col>
+			<ion-col></ion-col>
+		</ion-row>
+		<ion-row> <ion-col>12:00</ion-col> 
+			<ion-col></ion-col>
+			<ion-col class="available"></ion-col>
+			<ion-col></ion-col>
+			<ion-col></ion-col>
+			<ion-col class="available"></ion-col>
+			<ion-col></ion-col>
+			<ion-col></ion-col>
+		</ion-row>
+		<ion-row> <ion-col>13:00</ion-col> </ion-row>
+		<ion-row> <ion-col>14:00</ion-col> </ion-row>
+		<ion-row> <ion-col>15:00</ion-col> 
+			<ion-col></ion-col>
+			<ion-col class="available"></ion-col>
+			<ion-col></ion-col>
+			<ion-col></ion-col>
+			<ion-col class="available"></ion-col>
+			<ion-col></ion-col>
+			<ion-col></ion-col>
+		</ion-row>
+		<ion-row> <ion-col>16:00</ion-col> 
+			<ion-col></ion-col>
+			<ion-col class="available"></ion-col>
+			<ion-col></ion-col>
+			<ion-col></ion-col>
+			<ion-col class="available"></ion-col>
+			<ion-col></ion-col>
+			<ion-col></ion-col>
+		</ion-row>
+		<ion-row> <ion-col>17:00</ion-col> 
+			<ion-col></ion-col>
+			<ion-col></ion-col>
+			<ion-col class="available"></ion-col>
+			<ion-col></ion-col>
+			<ion-col></ion-col>
+			<ion-col></ion-col>
+			<ion-col></ion-col>
+		</ion-row>
+		<ion-row> <ion-col>18:00</ion-col> 
+			<ion-col class="available"></ion-col>
+			<ion-col></ion-col>
+			<ion-col></ion-col>
+			<ion-col class="available"></ion-col>
+			<ion-col></ion-col>
+			<ion-col></ion-col>
+			<ion-col></ion-col>
+		</ion-row>
+		<ion-row> <ion-col>19:00</ion-col>
+			<ion-col class="available"></ion-col>
+			<ion-col></ion-col>
+			<ion-col></ion-col>
+			<ion-col class="available"></ion-col>
+			<ion-col></ion-col>
+			<ion-col></ion-col>
+			<ion-col></ion-col>
+		</ion-row>
+		<ion-row> <ion-col>20:00</ion-col> </ion-row>
+		<ion-row> <ion-col>21:00</ion-col> </ion-row>
+		<ion-row> <ion-col>22:00</ion-col> </ion-row>
+		<ion-row> <ion-col>23:00</ion-col> </ion-row>
+		<ion-row> <ion-col>24:00</ion-col> </ion-row>
+		<ion-row> <ion-col>00:00</ion-col> </ion-row>
+		<ion-row> <ion-col>01:00</ion-col> </ion-row>
+		<ion-row> <ion-col>02:00</ion-col> </ion-row>
+		<ion-row> <ion-col>03:00</ion-col> </ion-row>
+		<ion-row> <ion-col>04:00</ion-col> </ion-row>	
+  </ion-card>
 
 </ion-content>

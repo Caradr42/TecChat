@@ -22,4 +22,7 @@ export class ProfilePage {
     console.log('ionViewDidLoad ProfilePage');
   }
 
+  carreras: string = "n64";
+  semestre: string = "1";
+
 }
