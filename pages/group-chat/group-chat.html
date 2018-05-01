@@ -13,15 +13,28 @@
       <button ion-fab><img src="assets/imgs/PNGs/llamada.png"></button>
     </ion-fab-list>
   </ion-fab>
+
+  <ion-fab left no-padding no-margin>
+		<button ion-fab color="vibrant" mini color="light" class="fab-button" style="margin: 20px 50px" no-padding> <img no-padding src="assets/imgs/PNGs/group.png" ></button>
+		<ion-fab-list no-padding class="images">
+            <button ion-fab no-padding><img  src="assets/imgs/PNGs/m1.png" ></button>
+            <button ion-fab no-padding><img  src="assets/imgs/PNGs/h1.png" ></button>
+            <button ion-fab no-padding><img  src="assets/imgs/PNGs/profile.png" ></button>
+            <button ion-fab no-padding><img  src="assets/imgs/PNGs/maestro.png" ></button>
+            <button ion-fab no-padding><img  src="assets/imgs/PNGs/m2.png" ></button>
+            <button ion-fab no-padding><img  src="assets/imgs/PNGs/h3.png" ></button>
+            <button ion-fab no-padding><img  src="assets/imgs/PNGs/h2.png" ></button>
+            <button ion-fab no-padding><img  src="assets/imgs/PNGs/m3.png" ></button>
+		</ion-fab-list>
+	</ion-fab>
+
   <ion-navbar no-padding color="lightG">
     <ion-grid>
       <ion-row align-items-center>
         <!-- usuarios -->
-        <ion-col col-2>
-          <img class="avatar" (click)="teacherProfile()" src="assets/imgs/PNGs/maestro.png" >
-        </ion-col>
+        <ion-col col-2> </ion-col>
         <ion-col col-8 class="name">
-          <p>Dr. Luis José Garza Robledo</p>
+          <p style="font-size: 20px; text-align: left;"> Administración</p>
         </ion-col>
         <ion-col col-2>
         </ion-col>
@@ -38,6 +51,14 @@
         <ion-row>
           <ion-col class="message-div" style="margin:0px; padding: 0px;">
           <ion-scroll class="yes-scroll" scrollY="true">
+            <ion-row>
+              <ion-col col-auto no-padding class="icons"><img src="assets/imgs/PNGs/m3.png" no-margin no-padding></ion-col>
+              <ion-col justify-content-end class="message">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit..</p>
+              </ion-col>
+              <ion-col col-2></ion-col>
+            </ion-row>
+
             <ion-row nowrap>
               <ion-col col-3></ion-col>
               <ion-col justify-content-end class="message">
@@ -48,7 +69,23 @@
             </ion-row>  
 
             <ion-row>
-              <ion-col col-auto no-padding class="icons"><img src="assets/imgs/PNGs/maestro.png" no-margin no-padding></ion-col>
+              <ion-col col-auto no-padding class="icons"><img src="assets/imgs/PNGs/m1.png" no-margin no-padding></ion-col>
+              <ion-col justify-content-end class="message">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit..</p>
+              </ion-col>
+              <ion-col col-2></ion-col>
+            </ion-row>
+
+            <ion-row>
+              <ion-col col-auto no-padding class="icons"><img src="assets/imgs/PNGs/h1.png" no-margin no-padding></ion-col>
+              <ion-col justify-content-end class="message">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit..</p>
+              </ion-col>
+              <ion-col col-2></ion-col>
+            </ion-row>
+
+            <ion-row>
+              <ion-col col-auto no-padding class="icons"><img src="assets/imgs/PNGs/h2.png" no-margin no-padding></ion-col>
               <ion-col justify-content-end class="message">
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit..</p>
               </ion-col>
@@ -59,16 +96,24 @@
               <!-- <ion-col></ion-col>  -->
               <ion-col col-3></ion-col>
               <ion-col justify-content-end class="message">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur.</p>
               </ion-col>
+            </ion-row> 
 
-            </ion-row>  
             <ion-row>
               <ion-col col-auto no-padding class="icons"><img src="assets/imgs/PNGs/maestro.png" no-margin no-padding></ion-col>
               <ion-col justify-content-end class="message">
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit..</p>
               </ion-col>
               <ion-col col-2></ion-col>
+            </ion-row>
+
+             <ion-row>
+              <ion-col col-auto class="icons"><img src="assets/imgs/PNGs/m3.png"></ion-col>
+              <ion-col justify-content-end class="message">
+                <p>Lorem ipsum dolor sit amet.</p>
+              </ion-col>
+              <ion-col col-1></ion-col>
             </ion-row>
 
             <ion-row> 
@@ -78,13 +123,6 @@
               </ion-col>
             </ion-row> 
 
-            <ion-row>
-              <ion-col col-auto class="icons"><img src="assets/imgs/PNGs/maestro.png"></ion-col>
-              <ion-col justify-content-end class="message">
-                <p>Lorem ipsum dolor sit amet.</p>
-              </ion-col>
-              <ion-col col-1></ion-col>
-            </ion-row>
           </ion-scroll> 
           </ion-col>
         </ion-row> 

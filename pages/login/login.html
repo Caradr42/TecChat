@@ -10,14 +10,14 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content>
+<ion-content padding>
   <ion-grid>
     <ion-row>
       <ion-col></ion-col>
       <ion-col align-self-center col-lg-5 col-12>
-        <div class="center">
+        <div>
         <h1>TecChat</h1>
-        <ion-list>
+
             <ion-item>
               <ion-label floating>Correo Institucional</ion-label>
               <ion-input type="text" #email></ion-input>
@@ -28,29 +28,28 @@
               <ion-input type="password" #password></ion-input>
             </ion-item>
             
-              <ion-item padding>
-                  <ion-label color="mediumG">Recuerdame</ion-label>
-                  <ion-checkbox color="secondary"></ion-checkbox>
-              </ion-item>
+            <ion-grid><ion-row class="rec"align-items-center>
+              <ion-col>
+                <ion-checkbox color="blueG"></ion-checkbox>
+              </ion-col>
+              <ion-col col-10 class="recuerdame">
+                <ion-label color="mediumG">Recuérdame</ion-label>
+              </ion-col>
+            </ion-row></ion-grid>
+             
               <!-- <ion-label> *Olvide mi contraseña </ion-label> -->
-            <div>
+            <div class="center">
             	<button ion-button round  (click)="signInUser()">Login</button>
             	<button ion-button round  (click)="register()">Registrar</button>
     		    </div>
-    	 </ion-list>
       </div>
       </ion-col>
       <ion-col></ion-col>
     </ion-row>
   </ion-grid>
-<!-- -->
 
 <!-- 
 <button ion-button full color="light" (click)="chat()">  chat</button>
-<button ion-button full color="light" (click)="fav()">  fav</button>
-<button ion-button full color="light" (click)="gr()">  gro</button>
-<button ion-button full color="light" (click)="cl()">  clas</button>
-<button ion-button full color="light" (click)="rec()">  rece</button>
 <button ion-button full color="light" (click)="pc()">  phone</button>
 <button ion-button full color="light" (click)="pr()">  profi</button>
 <button ion-button full color="light" (click)="tpr()">  teacpro</button> -->

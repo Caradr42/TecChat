@@ -28,21 +28,21 @@
 	    <!-- botones -->
 	    <ion-row no-padding>
 	      <ion-col>
-	        <button ion-button clear small color="primary" icon-start>
-	          <ion-icon name='chatbubbles'></ion-icon>
+	        <button ion-button clear small color="primary" icon-start (click)="teacherChat()">
+	          <img class="icon" src="assets/imgs/PNGS/chat.png">
 	          Mandar mensaje
 	        </button>
 	      </ion-col>
 	      <ion-col text-center>
 	        <button ion-button clear small color="primary" icon-start>
-	          <ion-icon name='call'></ion-icon>
+	          <img class="icon" src="assets/imgs/PNGS/llamada.png">
 	          Llamar
 	        </button>
 	      </ion-col>
 	    </ion-row>
 	    <!-- lista de materias que imparte -->
-	    <ion-row no-padding>
-	    	<ion-list>
+	    <ion-row>
+	    	<ion-list no-padding>
 				<ion-list-header>
 					Materias impartidas
 				</ion-list-header>
@@ -62,6 +62,9 @@
 		</ion-row>
 
 		<!-- horario -->
+		<ion-list-header>
+			Horario
+		</ion-list-header>
 		<ion-row>
 			<ion-col></ion-col>
 			<ion-col>Lun</ion-col>

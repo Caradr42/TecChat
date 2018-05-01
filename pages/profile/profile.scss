@@ -1,3 +1,27 @@
 page-profile {
 
+	.pleaseFit {
+		padding: 0;
+		margin: 0;
+		width: 300px;
+	}
+
+	.available {
+		background: color($colors, 'blueG');
+	}
+
+	.col {
+		border: think solid color($colors, 'mediumG');
+	}
+
+/*	.col{
+background: gray;
+border: think solid black;
+}*/
+
+.imag {
+  border-radius: 100%;
+  cursor: pointer;
+}
+
 }

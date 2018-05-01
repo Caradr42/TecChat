@@ -7,6 +7,8 @@ import 'rxjs/add/operator/map';
 import { ProfilePage } from '../profile/profile';
 import { TeacherProfilePage } from '../teacher-profile/teacher-profile';
 import { ChatPage } from '../chat/chat';
+import { AlumnoChatPage } from '../alumno-chat/alumno-chat';
+import { GroupChatPage } from '../group-chat/group-chat';;
 
 @Component({
   selector: 'page-home',
@@ -66,8 +68,16 @@ export class HomePage {
      this.navCtrl.push(TeacherProfilePage);
   }
 
-  chat(){
+  teacherChat(){
     this.navCtrl.push(ChatPage);
+  }
+
+  alumnoChat(){
+    this.navCtrl.push(AlumnoChatPage);
+  }
+
+  groupChat(){
+    this.navCtrl.push(GroupChatPage);
   }
 
   // RecentsRoot = RecentsPage;
