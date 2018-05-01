@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { HomePage } from '../home/home';
 
 /**
  * Generated class for the ProfilePage page.
@@ -24,5 +25,9 @@ export class ProfilePage {
 
   carreras: string = "4";
   semestre: string = "4";
+
+  home(){
+    this.navCtrl.push(HomePage);
+  }
 
 }

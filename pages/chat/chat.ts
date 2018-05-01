@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, Platform } from 'ionic-angular';
 import { TeacherProfilePage } from '../teacher-profile/teacher-profile';
+// import { StatusBar, Keyboard } from '@ionic-native'; 
+
 
 /**
  * Generated class for the ChatPage page.
@@ -16,7 +18,11 @@ import { TeacherProfilePage } from '../teacher-profile/teacher-profile';
 })
 export class ChatPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, platform:Platform) {
+  	// platform.ready().then(() => {
+  	// 	Keyboard.disableScroll(true)
+  	// 	StatusBar.styleDefault();
+  	// });
   }
 
   ionViewDidLoad() {
