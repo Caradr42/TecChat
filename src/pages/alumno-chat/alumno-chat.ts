@@ -1,9 +1,8 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { TeacherProfilePage } from '../teacher-profile/teacher-profile';
 
 /**
- * Generated class for the ChatPage page.
+ * Generated class for the AlumnoChatPage page.
  *
  * See https://ionicframework.com/docs/components/#navigation for more info on
  * Ionic pages and navigation.
@@ -11,20 +10,16 @@ import { TeacherProfilePage } from '../teacher-profile/teacher-profile';
 
 @IonicPage()
 @Component({
-  selector: 'page-chat',
-  templateUrl: 'chat.html',
+  selector: 'page-alumno-chat',
+  templateUrl: 'alumno-chat.html',
 })
-export class ChatPage {
+export class AlumnoChatPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad ChatPage');
+    console.log('ionViewDidLoad AlumnoChatPage');
   }
-
-teacherProfile(){
-  this.navCtrl.push(TeacherProfilePage);
-}
 
 }

@@ -1,10 +1,12 @@
-page-chat {
-
-	/*.name {
+page-group-chat {
+/*.name {
 		font-size: 18px;
 		margin-top: 4px;
 	}
 */
+	.images img{
+		padding: 0;
+	}
 
 	ion-navbar {
 		height: 15VH;
@@ -66,6 +68,7 @@ page-chat {
 		margin-right: 5px;
 		cursor: pointer;
 	}
+
 
 
 

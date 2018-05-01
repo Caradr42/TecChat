@@ -10,4 +10,15 @@ page-profile {
 		background: color($colors, 'blueG');
 	}
 
+	.col {
+		border: think solid color($colors, 'mediumG');
+	}
+	.imag {
+	  border-radius: 100%;
+	}
+/*	.col{
+background: gray;
+border: think solid black;
+}*/
+
 }

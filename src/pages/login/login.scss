@@ -5,17 +5,19 @@ page-login {
 		text-align: center;
 		font-color: darkgray;
 	}
-	h3{
-		text-align: justify;
-	}
-	
-	.back {
-		background-color: darkblue;
-	}
 	.center{
-		margin: 5%;
-		background-color: white;
-		color: #222;
+		align-self: center;
+		padding: 10px 0px 0 10px;
+	}
+	.rec{
+		padding: 0px 0 5px 10px;
+	}
+	.recuerdame{
+		line-height: center;
+		text-align: left;
+		font-size: 15px;
+		font-color: color($colors, 'lightG');;
+
 	}
 }
 

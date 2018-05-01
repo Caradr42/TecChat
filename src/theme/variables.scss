@@ -40,7 +40,7 @@ $colors: (
   light:      #f4f4f4,
   dark:       #222,
   lightY:     #fffffc,
-  lightG:     #bebebe,
+  lightG:     #ddd,
   mediumG:    #666666,
   darkG:      #333333,
   darkB:      #000033,
@@ -50,6 +50,10 @@ $colors: (
 .avatar {
   border-radius: 100%;
   cursor: pointer;
+}
+
+.chatB {
+  background-color: 'primary';
 }
 
 

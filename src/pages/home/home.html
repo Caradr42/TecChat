@@ -52,35 +52,70 @@
   <div [ngSwitch]="FavRes"> 
 
     <ion-list *ngSwitchCase="'Recientes'">
-      <ion-scroll scrollY="true">
-        <div class="Recientes">
-          <ion-list>
-            <ion-item>
-              <ion-avatar item-start (click)="teacherProfile()">
-                <img src="assets/imgs/PNGs/maestro.png">
-              </ion-avatar>
-              <h2>NOT Dr. Luis Jóse Garza Robledo</h2>
-              <p>Active.</p>
-              <ion-note item-end>3:43 pm</ion-note>
-            </ion-item>
+      <ion-scroll scrollY="true" class="yes-scroll">
+         <div class="Recientes">
+            <ion-list>
+              <!-- <input #contacto type="text" [(ngModel)]="contact" value={{log}}>  -->
+              <ion-item>
+                <ion-avatar item-start>
+                  <img src="assets/imgs/PNGs/m1.png">
+                </ion-avatar>
+                <h2>María Gonzalez Gonzalez</h2>
+                <p>Busy.</p>
+                <ion-note item-end>5:30 pm</ion-note>
+              </ion-item>
+              
+              <ion-item style="cursor: pointer;">
+                <ion-avatar item-start>
+                  <!-- <img (click)="gotoTeacherProfile()" src="assets/imgs/PNGs/maestro.png"> -->
+                  <img (click)="teacherProfile()" src="assets/imgs/PNGs/maestro.png">
+                </ion-avatar>
+                <div (click)="teacherChat()">
+                  <h2 >Dr. Luis Jóse Garza Robledo</h2>
+                  <p >Active.</p>
+                </div>
+                <ion-note item-end>3:43 pm</ion-note>
+              </ion-item>
+            
+        <!-- haksfjaasdsdanfads;lkfasd -->
+            
+              <ion-item style="cursor: pointer;">
+                <ion-avatar item-start>
+                  <img src="assets/imgs/PNGs/h1.png">
+                </ion-avatar>
+                <div (click)="alumnoChat()">
+                  <h2>Roberto Gomez Garza</h2>
+                  <p>Active.</p>
+                </div>
+                <ion-note item-end>2:10 pm</ion-note>
+              </ion-item>
 
-            <ion-item>
-              <ion-avatar item-start>
-                <img src="assets/imgs/PNGs/pp.png">
-              </ion-avatar>
-              <h2>NOT Roberto Gomez Garza</h2>
-              <p>Active.</p>
-              <ion-note item-end>2:00 pm</ion-note>
-            </ion-item>
+              <ion-item>
+                <ion-avatar item-start>
+                  <img src="assets/imgs/PNGs/m3.png">
+                </ion-avatar>
+                <h2>Fernanda Gabriela Aguirre</h2>
+                <p>Active.</p>
+                <ion-note item-end>12:32 pm</ion-note>
+              </ion-item>
 
-            <ion-item>
-              <ion-avatar item-start>
-                <img src="assets/imgs/PNGs/pp.png">
-              </ion-avatar>
-              <h2>NOT María Gonzalez Gonzalez</h2>
-              <p>Busy.</p>
-              <ion-note item-end>5:30 pm</ion-note>
-            </ion-item>
+              <ion-item>
+                <ion-avatar item-start>
+                  <img src="assets/imgs/PNGs/profile.png">
+                </ion-avatar>
+                <h2>Dr. Roberto Villareal </h2>
+                <p>Active.</p>
+                <ion-note item-end>9:45 am</ion-note>
+              </ion-item>
+
+              <ion-item>
+                <ion-avatar item-start>
+                  <img src="assets/imgs/PNGs/m4.png">
+                </ion-avatar>
+                <h2>Analuz Erendida Himenez</h2>
+                <p>Active.</p>
+                <ion-note item-end>9:45 am</ion-note>
+              </ion-item>
           </ion-list>
         </div>
       </ion-scroll>
@@ -88,34 +123,34 @@
 
 
     <ion-list *ngSwitchCase="'Favoritos'">
-      <ion-scroll scrollY="true">
+      <ion-scroll scrollY="true" class="yes-scroll">
         <div class="Favoritos">
-          <ion-list>
-
-            <ion-item>
+          <ion-list>     
+            <ion-item style="cursor: pointer;">
               <ion-avatar item-start>
-                <img src="assets/imgs/PNGs/maestro.png">
+                <img (click)="teacherProfile()" src="assets/imgs/PNGs/maestro.png">
               </ion-avatar>
-              <h2>Dr. Luis Jóse Garza Robledo</h2>
-              <p>Active.</p>
+              <div (click)="teacherChat()">
+                <h2 >Dr. Luis Jóse Garza Robledo</h2>
+                <p >Active.</p>
+              </div>
               <ion-note item-end>3:43 pm</ion-note>
             </ion-item>
-
             <ion-item>
               <ion-avatar item-start>
-                <img src="assets/imgs/PNGs/pp.png">
+                <img src="assets/imgs/PNGs/h2.png">
               </ion-avatar>
-              <h2>Roberto Gomez Garza</h2>
-              <p>Active.</p>
+              <h2>Rafael Rodriguez Villa</h2>
+              <p>Busy.</p>
               <ion-note item-end>2:00 pm</ion-note>
             </ion-item>
 
             <ion-item>
               <ion-avatar item-start>
-                <img src="assets/imgs/PNGs/pp.png">
+                <img src="assets/imgs/PNGs/m2.png">
               </ion-avatar>
-              <h2>María Gonzalez Gonzalez</h2>
-              <p>Busy.</p>
+              <h2>Ing. Mirna Gurtierrez Leal</h2>
+              <p>Active.</p>
               <ion-note item-end>5:30 pm</ion-note>
             </ion-item>
           </ion-list>
@@ -123,79 +158,97 @@
       </ion-scroll>
     </ion-list>   
 
+
     <ion-list *ngSwitchCase="'Clases'">
-      <ion-scroll scrollY="true">
-        <div class="Clases">
-          <ion-list>
-            
-              <ion-item>
-                <ion-avatar item-start>
-                  <img src="assets/imgs/PNGs/pp.png">
-                </ion-avatar>
-                <h2>Administración</h2>
-                <p>Grupo 2.</p>                       
-              </ion-item>
+      <ion-scroll scrollY="true" class="yes-scroll">
+         <div class="Clases">
+            <ion-list>
+              <!-- kjffdka;dskjaf;kdsjf;ask -->
+                <ion-item>
+                  <ion-avatar item-start>
+                    <img src="assets/imgs/PNGs/group.png">
+                  </ion-avatar>
+                  <div (click)="groupChat()" style="cursor: pointer;">
+                    <h2>Administración</h2>
+                    <p>Grupo 2.</p>  
+                  </div>                     
+                </ion-item>
+              
+                <ion-item>
+                  <ion-avatar item-start>
+                    <img src="assets/imgs/PNGs/group.png">
+                  </ion-avatar>
+                  <h2>EVAP</h2>
+                  <p>Grupo 5.</p>         
+                </ion-item>
 
-              <ion-item>
-                <ion-avatar item-start>
-                  <img src="assets/imgs/PNGs/pp.png">
-                </ion-avatar>
-                <h2>EVAP</h2>
-                <p>Grupo 5.</p>         
-              </ion-item>
+                <ion-item>
+                  <ion-avatar item-start>
+                    <img src="assets/imgs/PNGs/group.png">
+                  </ion-avatar>
+                  <h2>Ética</h2>
+                  <p>Grupo 22.</p>          
+                </ion-item>  
 
-              <ion-item>
-                <ion-avatar item-start>
-                  <img src="assets/imgs/PNGs/pp.png">
-                </ion-avatar>
-                <h2>Ética</h2>
-                <p>Grupo 3.</p>          
-              </ion-item>                   
+                <ion-item>
+                  <ion-avatar item-start>
+                    <img src="assets/imgs/PNGs/group.png">
+                  </ion-avatar>
+                  <h2>Finanzas</h2>
+                  <p>Grupo 7.</p>          
+                </ion-item>  
 
+                <ion-item>
+                  <ion-avatar item-start>
+                    <img src="assets/imgs/PNGs/group.png">
+                  </ion-avatar>
+                  <h2>Probabilidad</h2>
+                  <p>Grupo 13.</p>          
+                </ion-item> 
+
+                <ion-item>
+                  <ion-avatar item-start>
+                    <img src="assets/imgs/PNGs/group.png">
+                  </ion-avatar>
+                  <h2>Modelos cuantitativos y de optimización</h2>
+                  <p>Grupo 4.</p>          
+                </ion-item>              
           </ion-list>
         </div>
       </ion-scroll>
     </ion-list>   
 
     <ion-list *ngSwitchCase="'Grupos'">
-      <ion-scroll scrollY="true">
+      <ion-scroll scrollY="true" class="yes-scroll">
         <div class="Grupos">
-          <ion-list>
+        <ion-list>
+            <ion-item>
+              <ion-avatar item-start>
+                <img src="assets/imgs/PNGs/group.png">
+              </ion-avatar>
+              <h2>Equipo Finanzas</h2>
+              <p>Grupo 2.</p>                       
+            </ion-item>
 
-              <ion-item>
-                <ion-avatar item-start>
-                  <img src="assets/imgs/PNGs/pp.png">
-                </ion-avatar>
-                <h2>NOT Administración</h2>
-                <p>Grupo 2.</p>                       
-              </ion-item>
+            <ion-item>
+              <ion-avatar item-start>
+                <img src="assets/imgs/PNGs/group.png">
+              </ion-avatar>
+              <h2>Asesorias Probabilidad</h2>
+              <p>Grupo 5.</p>         
+            </ion-item>
 
-              <ion-item>
-                <ion-avatar item-start>
-                  <img src="assets/imgs/PNGs/pp.png">
-                </ion-avatar>
-                <h2>NOT EVAP</h2>
-                <p>Grupo 5.</p>         
-              </ion-item>
-
-              <ion-item>
-                <ion-avatar item-start>
-                  <img src="assets/imgs/PNGs/pp.png">
-                </ion-avatar>
-                <h2>NOT Ética</h2>
-                <p>Grupo 3.</p>          
-              </ion-item>
-
+            <ion-item>
+              <ion-avatar item-start>
+                <img src="assets/imgs/PNGs/group.png">
+              </ion-avatar>
+              <h2>Equipo Ética</h2>
+              <p>Grupo 3.</p>          
+            </ion-item>
           </ion-list>
         </div>
       </ion-scroll>
     </ion-list>     
   </div>
-   <!--   <ion-tabs>
-     <ion-tab [root]="RecentsRoot" tabTitle="Recientes">Recientes</ion-tab>
-    <ion-tab [root]="FavoritesRoot" tabTitle="Favoritos">akldsf</ion-tab>
-    <ion-tab [root]="ClassesRoot" tabTitle="Clases">kasdj;f</ion-tab>
-    <ion-tab [root]="GroupsRoot" tabTitle="Grupos"></ion-tab>
-  </ion-tabs> -->
   
 </ion-content>
